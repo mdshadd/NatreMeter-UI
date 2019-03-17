@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="container">
+    <h1>Welcome</h1>
+    <p>
+      <h3>Log in here!</h3>
+      <p>
+          <form method="post">
+            {% csrf_token %}
+            <!-- <label for="em">Phone No.:</label>
+            <input id="ph" type="number" name="phn" placeholder="01XXXXXXXXX" required>
+            <br><br><label for="pw">Password:</label>
+            <input id="pw" type="password" name="pass" placeholder="***********" required> -->
+
+            {{ form.as_table }}
+
+            <br><br><button class="btn btn-success outline" type="submit">Login</button>
+          </form>
+      </p>
+    </p>
+    <p>Don't have an account yet? <a href="/signup">Create your account here.</a></p>
+  </div>
+{% endblock %}

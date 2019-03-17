@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="container content-section">
+      <form action="/" method="POST">
+        {% csrf_token %}
+        <!-- <h1>Sign Up Page</h1>
+        <p>Please Note: First Name, Last Name, Password and Email Address are required</p>
+        <label for="n1">First Name: </label>
+        <input id="n1" type="text" name="1st" placeholder="First Name" required>
+        <br><br><label for="n2">Last Name: </label>
+        <input type="text" name="lst" placeholder="Last Name" required>
+        <br><br><label for="em">Email:    </label>
+        <input id="em" type="email" name="usermail" placeholder="name@email.com" required>
+        <br><br><label for="pw">Password:</label>
+        <input id="pw" type="password" name="pass" placeholder="***********" required>
+        <br><br><label for="em">Phone No.:</label>
+        <input id="ph" type="number" name="phn" placeholder="01XXXXXXXXX" required>
+        <br><br><label for="em">Age:</label>
+        <input id="age" type="number" name="user_age" placeholder="Age" required>
+        <br><br><p>Gender:</p>
+        <label for="m">Male </label>
+        <input id="m" type="radio" name="gen" value="m">
+        <label for="f">Female </label>
+        <input id="f" type="radio" name="gen" value="f">
+        <br> <br>
+        <input type="submit" class="btn btn-success outline" value="Sign Up"> -->
+
+        <fieldset class="form-group">
+          <legend class="border-bottom mb-4">Sign up now!</legend>
+          {{ form }}
+        </fieldset>
+        <div class="form-group">
+          <input type="submit" class="btn btn-success outline" value="Sign Up">
+        </div>
+      </form>
+    </div>
+{% endblock %}
